@@ -1,0 +1,141 @@
+body {
+	background-color: #333;
+}
+
+#clock {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+	grid-column-gap: 20px;
+	height: 200px;
+	max-width: 800px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+#clock .hours,
+#clock .minutes,
+#clock .seconds {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.digit.zero .top-horizontal,
+.digit.zero .right-top-vertical,
+.digit.zero .right-bottom-vertical,
+.digit.zero .bottom-horizontal,
+.digit.zero .left-bottom-vertical,
+.digit.zero .left-top-vertical,
+.digit.one .right-top-vertical,
+.digit.one .right-bottom-vertical,
+.digit.two .top-horizontal,
+.digit.two .right-top-vertical,
+.digit.two .middle-horizontal,
+.digit.two .left-bottom-vertical,
+.digit.two .bottom-horizontal,
+.digit.three .top-horizontal,
+.digit.three .right-top-vertical,
+.digit.three .middle-horizontal,
+.digit.three .right-bottom-vertical,
+.digit.three .bottom-horizontal,
+.digit.four .right-top-vertical,
+.digit.four .middle-horizontal,
+.digit.four .left-top-vertical,
+.digit.four .right-bottom-vertical,
+.digit.five .top-horizontal,
+.digit.five .left-top-vertical,
+.digit.five .middle-horizontal,
+.digit.five .right-bottom-vertical,
+.digit.five .bottom-horizontal,
+.digit.six .top-horizontal,
+.digit.six .left-top-vertical,
+.digit.six .middle-horizontal,
+.digit.six .right-bottom-vertical,
+.digit.six .bottom-horizontal,
+.digit.six .left-bottom-vertical,
+.digit.seven .top-horizontal,
+.digit.seven .right-top-vertical,
+.digit.seven .right-bottom-vertical,
+.digit.eight .bar,
+.digit.nine .top-horizontal,
+.digit.nine .left-top-vertical,
+.digit.nine .right-top-vertical,
+.digit.nine .middle-horizontal,
+.digit.nine .right-bottom-vertical,
+.digit.nine .bottom-horizontal,
+.digit.dot .dot-bottom,
+.digit.dot .dot-top {
+	background-color: #2dabf3;
+}
+
+.digit {
+	display: grid;
+	height: 100%;
+	/* 	max-width: 250px; */
+	/* 	height: 400px; */
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+	grid-gap: 5px 10px;
+}
+
+.bar {
+	background-color: #222;
+	transition-duration: 0.5s;
+	transition-property: background-color;
+}
+
+.top-horizontal {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.middle-horizontal {
+	grid-area: 3 / 2 / 4 / 3;
+}
+
+.bottom-horizontal {
+	grid-area: 5 / 2 / 6 / 3;
+}
+
+.left-top-vertical {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.right-top-vertical {
+	grid-area: 2 / 3 / 3 / 4;
+}
+
+.left-bottom-vertical {
+	grid-area: 4 / 1 / 5 / 2;
+}
+
+.right-bottom-vertical {
+	grid-area: 4 / 3 / 5 / 4;
+}
+
+.point-top {
+	display: grid;
+	grid-area: 2 / 2 / 3 / 3;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1px 1px;
+}
+
+.dot-top {
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+.point-bottom {
+	display: grid;
+	grid-area: 4 / 2 / 5 / 3;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1px 1px;
+}
+
+.dot-bottom {
+	grid-area: 2 / 2 / 3 / 3;
+}
